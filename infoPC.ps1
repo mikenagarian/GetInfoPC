@@ -9,7 +9,7 @@ $sep = "======================================================================="
 if (Test-Path $out) { Remove-Item $out -Force }
 
 function Escribir { param([string]$texto); $texto | Out-File $out -Encoding UTF8 -Append }
-function Progreso { param([int]$step, [string]$activity); $percent = [math]::Round(($step / 10) * 100); Write-Progress -Activity "Recopilando información del sistema..." -Status $activity -PercentComplete $percent }
+function Progreso { param([int]$step, [string]$activity); $percent = [math]::Round(($step / 10) * 100); Write-Progress -Activity "Recopilando informacion del sistema..." -Status $activity -PercentComplete $percent }
 
 $paso = 0
 
